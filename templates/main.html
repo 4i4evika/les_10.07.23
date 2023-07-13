@@ -1,0 +1,11 @@
+{% include 'header.html' %}
+
+<ul>
+    {% for user in users -%}
+    {% if '@gmail.com' in user.email -%}
+    <li>{{ user.name }}</li>
+    {% endif -%}
+    {% endfor -%}
+</ul>
+
+{% include 'footer.html' %}
